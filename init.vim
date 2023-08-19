@@ -31,13 +31,16 @@ Plug 'sharkdp/fd' " инструмент для поиска файлов и д�
 call plug#end()
 
 " Color scheme
- colorscheme moody
+colorscheme monokai-phoenix " Выбранная цветовая схема
+
+" Color cheme switch
+nnoremap <F7> <cmd>PrevColorScheme<cr>
+nnoremap <F8> <cmd>RandomColorScheme<cr>
+nnoremap <F9> <cmd>NextColorScheme<cr>
 
 " Netrw explorer
 let g:netrwbanner = 0 " скрыть баннер над файлами
 let g:netrwliststyle = 3 " дерево вместо обычного списка
 let g:netrwbrowsesplit = 3 " вертикальное разделение окна при нажатии Enter на файле
 
-nnoremap <F7> <cmd>PrevColorScheme<cr>
-nnoremap <F8> <cmd>RandomColorScheme<cr>
-nnoremap <F9> <cmd>NextColorScheme<cr>
+
