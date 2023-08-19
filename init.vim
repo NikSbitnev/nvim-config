@@ -17,7 +17,9 @@ set list listchars=tab:\ \ ,trail:·,nbsp:. " включает отображе�
 
 " Plugins
 call plug#begin()
-Plug 'morhetz/gruvbox' " цветовая схема gruvbox
+Plug 'flazz/vim-colorschemes' " цветовые схемы
+Plug 'xolox/vim-colorscheme-switcher' " переключатель цветовых схем по :F8/Shift-F8
+Plug 'xolox/vim-misc' " инструментом для работы с текстом, обязателен для xolox/vim-colorscheme-switcher
 
 Plug 'neovim/nvim-lspconfig' " конфигурация клиента LSP для Neovim
 Plug 'dense-analysis/ale' " линтер для валидации и редактирования кода
@@ -29,10 +31,13 @@ Plug 'sharkdp/fd' " инструмент для поиска файлов и д�
 call plug#end()
 
 " Color scheme
-colorscheme gruvbox
+ colorscheme moody
 
 " Netrw explorer
 let g:netrwbanner = 0 " скрыть баннер над файлами
 let g:netrwliststyle = 3 " дерево вместо обычного списка
 let g:netrwbrowsesplit = 3 " вертикальное разделение окна при нажатии Enter на файле
 
+nnoremap <F7> <cmd>PrevColorScheme<cr>
+nnoremap <F8> <cmd>RandomColorScheme<cr>
+nnoremap <F9> <cmd>NextColorScheme<cr>
