@@ -52,7 +52,7 @@ nnoremap <leader>g :Rg<CR>
 syntax on
 set background=dark
 colorscheme hybrid_reverse
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='minimalist'
 
